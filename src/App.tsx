@@ -33,7 +33,7 @@ function App() {
 
   return (
 
-    <div className="min-h-screen w-full overflow-x-hidden bg-white text-slate-800 dark:bg-slate-800 dark:text-white transition-colors duration-300">
+    <div className="min-h-screen w-full overflow-x-hidden bg-[#f6f7fb] text-slate-800 dark:bg-[#0A1128] dark:text-white transition-colors duration-300">
 
       {/* Navbar */}
       <Navbar role={role} setRole={setRole} />

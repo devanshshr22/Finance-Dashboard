@@ -5,17 +5,18 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+
+  safelist: [
+    "dark:bg-slate-900",
+    "dark:bg-slate-800",
+    "dark:bg-slate-700",
+    "dark:border-slate-700",
+    "dark:text-white",
+  ],
+
   theme: {
-    extend: {
-
-      colors: {
-        ink: "#4A4A4A",
-        coolgray: "#CBCBCB",
-        ivory: "#FFFFE3",
-        slate: "#6D8196"
-      }
-
-    },
+    extend: {},
   },
+
   plugins: [],
 }
