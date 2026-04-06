@@ -1,75 +1,152 @@
-# React + TypeScript + Vite
+# Finance Dashboard
+A responsive Finance Dashboard built using **React, TypeScript, TailwindCSS, and Recharts**.
+The application allows users to track financial activity, visualize spending patterns, and manage transactions through a clean and interactive dashboard interface.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Dashboard Overview
+- Summary cards displaying **Total Balance, Total Income, and Total Expenses**
+- **Balance Trend Line Chart** showing balance changes over time
+- **Spending Breakdown Pie Chart** showing category-wise expenses
 
-## React Compiler
+## Transactions Management
+- View all transactions in a structured table
+- Search transactions by category
+- Filter transactions by **Income / Expense**
+- Sort transactions by **date**
+- **Add new transactions**
+- **Edit existing transactions**
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Role Based UI
+Two roles are simulated in the UI:
 
-Note: This will impact Vite dev & build performances.
+### Viewer
+- Can view dashboard data
+- Cannot modify transactions
 
-## Expanding the ESLint configuration
+### Admin
+- Can add new transactions
+- Can edit existing transactions
+- Changes automatically update the dashboard
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Insights Section
+The dashboard generates useful financial insights including:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Highest spending category
+- Monthly spending comparison
+- Observational spending insight
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Data Persistence
+Transactions are stored using **LocalStorage**, meaning:
+- Added transactions persist after refresh
+- Edited transactions update instantly
+- Dashboard automatically recalculates charts and totals
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## UI / UX
+- Clean **FinTech-style minimal design**
+- **Fully responsive layout**
+- Works on **desktop, tablet, and mobile**
+- **Dark mode / Light mode toggle**
+- Interactive charts with tooltips
+- Smooth hover animations on dashboard components
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Frontend
+React  
+TypeScript  
+Vite  
+
+### Styling
+TailwindCSS  
+
+### Charts
+Recharts  
+
+### State Management
+React Hooks  
+
+### Storage
+LocalStorage  
+
+---
+
+# Installation
+Clone the repository:
+
+git clone https://github.com/devanshshr22/Finance-Dashboard.git
+
+Navigate into the project directory:
+
+cd finance-dashboard
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm run dev
+
+Open the application in your browser:
+
+http://localhost:5173
+
+---
+
+# Project Structure
+
+finance-dashboard
+
+src
+- components
+  - Navbar.tsx
+  - SummaryCard.tsx
+  - BalanceChart.tsx
+  - CategoryChart.tsx
+  - TransactionTable.tsx
+  - Insights.tsx
+
+- data
+  - transactions.ts
+
+- types
+  - transaction.ts
+
+- App.tsx
+- main.tsx
+
+public
+
+package.json  
+vite.config.ts  
+README.md  
+
+---
+
+# Future Improvements
+Potential improvements for future versions:
+
+- Backend integration with a database
+- User authentication system
+- Export transactions as CSV or JSON
+- Advanced financial analytics
+- Budget planning tools
+- Multi-user support
+
+---
+
+# Author
+
+Devansh Shrivastava
+
+---
+
+# License
+
+This project is created for educational and evaluation purposes.
+
